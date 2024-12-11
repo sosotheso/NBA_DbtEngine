@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_nba_games
+    description: "Staging model for NBA games data."
+    columns:
+      - name: game_id
+        description: "Unique identifier for the game."
+        tests:
+          - not_null
+          - unique
+      - name: game_date
+        description: "Date of the game."
+        tests:
+          - not_null
+      - name: team_id_home
+        description: "ID of the home team."
+
+sources:
+  - name: raw_data
+    description: "Raw data ingested into the database."
+    tables:
+      - name: nba_raw_game
+        description: "Raw data for NBA games."
