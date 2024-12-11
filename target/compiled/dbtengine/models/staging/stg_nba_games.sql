@@ -59,7 +59,7 @@ WITH raw_games AS (
         pts_away AS away_points,
         plus_minus_away AS away_plus_minus,
         video_available_away AS away_video_available
-    FROM {{ source('raw_data', 'nba_raw_game') }}
+    FROM "nba_dev"."raw_data"."nba_raw_game"
 )
 SELECT
     *,
@@ -73,4 +73,4 @@ SELECT
         ELSE team_id_home
     END AS losing_team_id,
     ABS(home_points - away_points) AS point_difference -- Calculate point difference
-FROM raw_games
+FROM raw_games;

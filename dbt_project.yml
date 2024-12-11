@@ -23,7 +23,7 @@ profile: nba_profile         # Profile defined in profiles.yml for database conn
 
 # Custom settings for model configurations
 models:
-  +materialized: view        # Default materialization (view, table, incremental, ephemeral)
+  +materialized: table        # Default materialization (view, table, incremental, ephemeral)
   staging:
     +schema: staging       # target Schema for staging models
 
