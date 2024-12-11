@@ -14,9 +14,9 @@ docs-paths: ["docs"]         # Directory for documentation markdown files
 
 # Specify where DBT will write compiled SQL and run results
 target-path: "target"        # Directory for compiled SQL
-clean-targets:               # Directories to delete on 'dbt clean'
+clean-targets:
   - "target"
-  - "dbt_modules"
+  - "dbt_packages"  # Update to the new default path
 
 # Default database configurations
 profile: nba_profile         # Profile defined in profiles.yml for database connection
@@ -25,11 +25,11 @@ profile: nba_profile         # Profile defined in profiles.yml for database conn
 models:
   +materialized: view        # Default materialization (view, table, incremental, ephemeral)
   staging:
-    +schema: staging       # Schema for staging models
-      
+    +schema: staging       # target Schema for staging models
+
 # Define tests and other project-level customizations (optional)
 on-run-start:  # SQL or macros to run at the start of a dbt run
-  - "{{ log('Starting dbt project...', info=True) }}"
+  - "CREATE SCHEMA IF NOT EXISTS staging;"
 
 on-run-end:    # SQL or macros to run at the end of a dbt run
   - "{{ log('dbt project completed successfully.', info=True) }}"
