@@ -83,6 +83,6 @@ SELECT
         ELSE team_id_home
     END AS losing_team_id,
     ABS(home_points - away_points) AS point_difference -- Calculate point difference
-FROM raw_games;
+FROM raw_games
   );
   

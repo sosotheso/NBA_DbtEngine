@@ -3644,3 +3644,309 @@ LINE 87: FROM raw_games;
 [0m00:13:17.679355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000133C518C1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000133C64ECDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000133C64DC460>]}
 [0m00:13:17.680352 [debug] [MainThread]: Flushing usage events
 [0m00:13:18.051211 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:15:01.702210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C2E9C190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C4DD0610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C4DD0550>]}
+
+
+============================== 00:15:01.707197 | d3a3645e-8782-49c1-ae6e-163cf1489028 ==============================
+[0m00:15:01.707197 [info ] [MainThread]: Running with dbt=1.9.0
+[0m00:15:01.708196 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\soso\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\COMPUTER_SCIENCE\\NBA_DATA_PROJECT\\DbtEngine\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select .\\models\\staging\\stg_nba_games.sql', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:15:02.060567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C41F04F0>]}
+[0m00:15:02.157994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C2149730>]}
+[0m00:15:02.159966 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m00:15:02.571996 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m00:15:03.016806 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:15:03.017804 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:15:03.025808 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.staging
+[0m00:15:03.120530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C5518130>]}
+[0m00:15:03.290099 [debug] [MainThread]: Wrote artifact WritableManifest to D:\COMPUTER_SCIENCE\NBA_DATA_PROJECT\DbtEngine\target\manifest.json
+[0m00:15:03.296062 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\COMPUTER_SCIENCE\NBA_DATA_PROJECT\DbtEngine\target\semantic_manifest.json
+[0m00:15:03.321340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C4841640>]}
+[0m00:15:03.322360 [info ] [MainThread]: Found 2 operations, 1 model, 3 data tests, 1 source, 429 macros
+[0m00:15:03.322360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C54BBF10>]}
+[0m00:15:03.325329 [info ] [MainThread]: 
+[0m00:15:03.325798 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:15:03.326455 [info ] [MainThread]: 
+[0m00:15:03.327047 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:15:03.329727 [debug] [ThreadPool]: Acquiring new postgres connection 'list_nba_dev'
+[0m00:15:03.457387 [debug] [ThreadPool]: Using postgres connection "list_nba_dev"
+[0m00:15:03.457387 [debug] [ThreadPool]: On list_nba_dev: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "connection_name": "list_nba_dev"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:15:03.458384 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:15:03.618998 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.161 seconds
+[0m00:15:03.621019 [debug] [ThreadPool]: On list_nba_dev: Close
+[0m00:15:03.622989 [debug] [ThreadPool]: Acquiring new postgres connection 'list_nba_dev_nba'
+[0m00:15:03.631989 [debug] [ThreadPool]: Using postgres connection "list_nba_dev_nba"
+[0m00:15:03.631989 [debug] [ThreadPool]: On list_nba_dev_nba: BEGIN
+[0m00:15:03.632984 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:15:03.680921 [debug] [ThreadPool]: SQL status: BEGIN in 0.048 seconds
+[0m00:15:03.680921 [debug] [ThreadPool]: Using postgres connection "list_nba_dev_nba"
+[0m00:15:03.681943 [debug] [ThreadPool]: On list_nba_dev_nba: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "connection_name": "list_nba_dev_nba"} */
+select
+      'nba_dev' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'nba'
+    union all
+    select
+      'nba_dev' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'nba'
+    union all
+    select
+      'nba_dev' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'nba'
+  
+[0m00:15:03.690464 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.008 seconds
+[0m00:15:03.691461 [debug] [ThreadPool]: On list_nba_dev_nba: ROLLBACK
+[0m00:15:03.692653 [debug] [ThreadPool]: On list_nba_dev_nba: Close
+[0m00:15:03.699652 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:03.699652 [debug] [MainThread]: On master: BEGIN
+[0m00:15:03.700663 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:15:03.749094 [debug] [MainThread]: SQL status: BEGIN in 0.049 seconds
+[0m00:15:03.750115 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:03.750115 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m00:15:03.758914 [debug] [MainThread]: SQL status: SELECT 0 in 0.007 seconds
+[0m00:15:03.759911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C59293A0>]}
+[0m00:15:03.760909 [debug] [MainThread]: On master: ROLLBACK
+[0m00:15:03.762904 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:03.762904 [debug] [MainThread]: On master: BEGIN
+[0m00:15:03.763900 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m00:15:03.763900 [debug] [MainThread]: On master: COMMIT
+[0m00:15:03.764921 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:03.764921 [debug] [MainThread]: On master: COMMIT
+[0m00:15:03.765920 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:15:03.773897 [debug] [MainThread]: Writing injected SQL for node "operation.dbtengine.dbtengine-on-run-start-0"
+[0m00:15:03.781865 [info ] [MainThread]: 1 of 1 START hook: dbtengine.on-run-start.0 .................................... [RUN]
+[0m00:15:03.782850 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:03.783847 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "connection_name": "master"} */
+CREATE SCHEMA IF NOT EXISTS staging;
+[0m00:15:03.784844 [debug] [MainThread]: SQL status: CREATE SCHEMA in 0.000 seconds
+[0m00:15:03.785869 [info ] [MainThread]: 1 of 1 OK hook: dbtengine.on-run-start.0 ....................................... [[32mOK[0m in 0.02s]
+[0m00:15:03.786839 [info ] [MainThread]: 
+[0m00:15:03.786839 [debug] [MainThread]: On master: Close
+[0m00:15:03.790783 [debug] [Thread-1  ]: Began running node model.dbtengine.stg_nba_games
+[0m00:15:03.791783 [info ] [Thread-1  ]: 1 of 1 START sql table model nba.stg_nba_games ................................. [RUN]
+[0m00:15:03.791783 [debug] [Thread-1  ]: Acquiring new postgres connection 'model.dbtengine.stg_nba_games'
+[0m00:15:03.792780 [debug] [Thread-1  ]: Began compiling node model.dbtengine.stg_nba_games
+[0m00:15:03.799761 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbtengine.stg_nba_games"
+[0m00:15:03.800771 [debug] [Thread-1  ]: Began executing node model.dbtengine.stg_nba_games
+[0m00:15:03.857633 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbtengine.stg_nba_games"
+[0m00:15:03.858627 [debug] [Thread-1  ]: Using postgres connection "model.dbtengine.stg_nba_games"
+[0m00:15:03.859608 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: BEGIN
+[0m00:15:03.860599 [debug] [Thread-1  ]: Opening a new connection, currently in state init
+[0m00:15:03.909142 [debug] [Thread-1  ]: SQL status: BEGIN in 0.049 seconds
+[0m00:15:03.910167 [debug] [Thread-1  ]: Using postgres connection "model.dbtengine.stg_nba_games"
+[0m00:15:03.911139 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "node_id": "model.dbtengine.stg_nba_games"} */
+
+  
+    
+
+  create  table "nba_dev"."nba"."stg_nba_games__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH raw_games AS (
+    SELECT
+        -- Basic Game Information
+        game_id,
+        season_id,
+        game_date::DATE AS game_date, -- Extract the date part
+        season_type,
+        
+        -- Home Team Information
+        team_id_home,
+        team_abbreviation_home,
+        team_name_home,
+        matchup_home,
+        wl_home AS home_win_loss,
+        fgm_home AS home_field_goals_made,
+        fga_home AS home_field_goals_attempted,
+        fg_pct_home AS home_field_goal_percentage,
+        fg3m_home AS home_three_point_made,
+        fg3a_home AS home_three_point_attempted,
+        fg3_pct_home AS home_three_point_percentage,
+        ftm_home AS home_free_throw_made,
+        fta_home AS home_free_throw_attempted,
+        ft_pct_home AS home_free_throw_percentage,
+        oreb_home AS home_offensive_rebounds,
+        dreb_home AS home_defensive_rebounds,
+        reb_home AS home_total_rebounds,
+        ast_home AS home_assists,
+        stl_home AS home_steals,
+        blk_home AS home_blocks,
+        tov_home AS home_turnovers,
+        pf_home AS home_personal_fouls,
+        pts_home AS home_points,
+        plus_minus_home AS home_plus_minus,
+        video_available_home AS home_video_available,
+        
+        -- Away Team Information
+        team_id_away,
+        team_abbreviation_away,
+        team_name_away,
+        matchup_away,
+        wl_away AS away_win_loss,
+        fgm_away AS away_field_goals_made,
+        fga_away AS away_field_goals_attempted,
+        fg_pct_away AS away_field_goal_percentage,
+        fg3m_away AS away_three_point_made,
+        fg3a_away AS away_three_point_attempted,
+        fg3_pct_away AS away_three_point_percentage,
+        ftm_away AS away_free_throw_made,
+        fta_away AS away_free_throw_attempted,
+        ft_pct_away AS away_free_throw_percentage,
+        oreb_away AS away_offensive_rebounds,
+        dreb_away AS away_defensive_rebounds,
+        reb_away AS away_total_rebounds,
+        ast_away AS away_assists,
+        stl_away AS away_steals,
+        blk_away AS away_blocks,
+        tov_away AS away_turnovers,
+        pf_away AS away_personal_fouls,
+        pts_away AS away_points,
+        plus_minus_away AS away_plus_minus,
+        video_available_away AS away_video_available
+    FROM "nba_dev"."raw_data"."nba_raw_game"
+)
+SELECT
+    *,
+    -- Derive Outcome Columns
+    CASE 
+        WHEN home_points > away_points THEN team_id_home
+        ELSE team_id_away
+    END AS winning_team_id,
+    CASE 
+        WHEN home_points > away_points THEN team_id_away
+        ELSE team_id_home
+    END AS losing_team_id,
+    ABS(home_points - away_points) AS point_difference -- Calculate point difference
+FROM raw_games
+  );
+  
+[0m00:15:04.724867 [debug] [Thread-1  ]: SQL status: SELECT 65698 in 0.813 seconds
+[0m00:15:04.732848 [debug] [Thread-1  ]: Using postgres connection "model.dbtengine.stg_nba_games"
+[0m00:15:04.732848 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "node_id": "model.dbtengine.stg_nba_games"} */
+alter table "nba_dev"."nba"."stg_nba_games__dbt_tmp" rename to "stg_nba_games"
+[0m00:15:04.756555 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.023 seconds
+[0m00:15:04.780493 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: COMMIT
+[0m00:15:04.781490 [debug] [Thread-1  ]: Using postgres connection "model.dbtengine.stg_nba_games"
+[0m00:15:04.781490 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: COMMIT
+[0m00:15:04.794350 [debug] [Thread-1  ]: SQL status: COMMIT in 0.012 seconds
+[0m00:15:04.801334 [debug] [Thread-1  ]: Applying DROP to: "nba_dev"."nba"."stg_nba_games__dbt_backup"
+[0m00:15:04.807341 [debug] [Thread-1  ]: Using postgres connection "model.dbtengine.stg_nba_games"
+[0m00:15:04.807341 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "nba_profile", "target_name": "dev", "node_id": "model.dbtengine.stg_nba_games"} */
+drop table if exists "nba_dev"."nba"."stg_nba_games__dbt_backup" cascade
+[0m00:15:04.846240 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.038 seconds
+[0m00:15:04.849258 [debug] [Thread-1  ]: On model.dbtengine.stg_nba_games: Close
+[0m00:15:04.852645 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd3a3645e-8782-49c1-ae6e-163cf1489028', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C59D3970>]}
+[0m00:15:04.853644 [info ] [Thread-1  ]: 1 of 1 OK created sql table model nba.stg_nba_games ............................ [[32mSELECT 65698[0m in 1.06s]
+[0m00:15:04.854381 [debug] [Thread-1  ]: Finished running node model.dbtengine.stg_nba_games
+[0m00:15:04.856390 [info ] [MainThread]: 
+[0m00:15:04.857400 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:04.857400 [debug] [MainThread]: On master: BEGIN
+[0m00:15:04.857400 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:15:04.908769 [debug] [MainThread]: SQL status: BEGIN in 0.051 seconds
+[0m00:15:04.909726 [debug] [MainThread]: On master: COMMIT
+[0m00:15:04.910716 [debug] [MainThread]: Using postgres connection "master"
+[0m00:15:04.911792 [debug] [MainThread]: On master: COMMIT
+[0m00:15:04.912728 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:15:04.915725 [info ] [MainThread]: dbt project completed successfully.
+[0m00:15:04.916697 [debug] [MainThread]: Writing injected SQL for node "operation.dbtengine.dbtengine-on-run-end-0"
+[0m00:15:04.917719 [info ] [MainThread]: 1 of 1 START hook: dbtengine.on-run-end.0 ...................................... [RUN]
+[0m00:15:04.918571 [info ] [MainThread]: 1 of 1 OK hook: dbtengine.on-run-end.0 ......................................... [[32mOK[0m in 0.01s]
+[0m00:15:04.919591 [debug] [MainThread]: On master: Close
+[0m00:15:04.920594 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:15:04.921567 [debug] [MainThread]: Connection 'list_nba_dev' was properly closed.
+[0m00:15:04.921567 [debug] [MainThread]: Connection 'list_nba_dev_nba' was properly closed.
+[0m00:15:04.921567 [debug] [MainThread]: Connection 'model.dbtengine.stg_nba_games' was properly closed.
+[0m00:15:04.922563 [info ] [MainThread]: 
+[0m00:15:04.923561 [info ] [MainThread]: Finished running 2 project hooks, 1 table model in 0 hours 0 minutes and 1.60 seconds (1.60s).
+[0m00:15:04.925566 [debug] [MainThread]: Command end result
+[0m00:15:04.957496 [debug] [MainThread]: Wrote artifact WritableManifest to D:\COMPUTER_SCIENCE\NBA_DATA_PROJECT\DbtEngine\target\manifest.json
+[0m00:15:04.962458 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\COMPUTER_SCIENCE\NBA_DATA_PROJECT\DbtEngine\target\semantic_manifest.json
+[0m00:15:04.971433 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\COMPUTER_SCIENCE\NBA_DATA_PROJECT\DbtEngine\target\run_results.json
+[0m00:15:04.971433 [info ] [MainThread]: 
+[0m00:15:04.973435 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:15:04.974427 [info ] [MainThread]: 
+[0m00:15:04.975424 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m00:15:04.977421 [debug] [MainThread]: Command `dbt run` succeeded at 00:15:04.977421 after 3.36 seconds
+[0m00:15:04.978437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C2E9C190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C422B4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000296C4841640>]}
+[0m00:15:04.979436 [debug] [MainThread]: Flushing usage events
+[0m00:15:05.338073 [debug] [MainThread]: An error was encountered while trying to flush usage events
