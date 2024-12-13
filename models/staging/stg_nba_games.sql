@@ -1,3 +1,4 @@
+{{ config(schema='staging') }}
 WITH raw_games AS (
     SELECT
         -- Basic Game Information
